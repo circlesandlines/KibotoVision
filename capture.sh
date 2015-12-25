@@ -1,2 +1,2 @@
 #!/bin/bash
-ffmpeg -y -framerate 5 -video_size 640x480 -f avfoundation -i "1:none" -vcodec libx264 -crf 0 -preset ultrafast stream/out.h264
+ffmpeg -y -framerate 10 -async 1 -pix_fmt uyvy422 -s 1280x800 -threads 2 -f avfoundation -i "1:none" -vcodec libx264 -tune zerolatency -preset ultrafast -crf 0 -vf scale=640:-1 stream/out.h264
