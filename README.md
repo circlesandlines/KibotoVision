@@ -9,7 +9,5 @@ Built with of OpenCV and ffmpeg.
 - ffmpeg
 
 ## Notes:
-- Still needs a proper interface
-- Lag is definitely a consideration!
-- Check out the capture.sh file for adjusting framerate and stream quality
+- Check out the `capture_rtp.sh` file for adjusting framerate and stream quality
 - game control server still needed
