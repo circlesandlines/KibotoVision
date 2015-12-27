@@ -5,6 +5,9 @@ import time
 	Extend Brain class so you can implement your own brain logic
 	Just override the brain method
 
+	TODO:
+	- need to add the moust and keyboard control aspect of the SDK
+
 """
 
 class Brain:
