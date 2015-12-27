@@ -1,38 +1,44 @@
 import cv2, platform
 import time
 
-def brain(imgdata, fnum):
-	# do image stuff here
-	cv2.imshow('BotStream', imgdata)
+"""
+	Extend Brain class so you can implement your own brain logic
+	Just override the brain method
 
-#capture = cv2.VideoCapture('stream/out.h264')
-capture = cv2.VideoCapture('stream.sdp')
-cv2.namedWindow('BotStream', cv2.WINDOW_OPENGL)
+"""
 
-fnum = 0
-while(True):
+class Brain:
+	def __init__(self):
+		self.capture = cv2.VideoCapture('stream.sdp')
+		cv2.namedWindow('DebugVision', cv2.WINDOW_OPENGL)
 
-	(grabbed, imgdata) = capture.read()
+	def _debug(self, img):
+		cv2.imshow('DebugVision', img)
 
-	if not grabbed:
-		print "no image"
-		#time.sleep(0.5)
-		continue
+	def brain(self, imgdata):
+		"""Override this function for bot logic"""
+		self._debug(imgdata)
 
-	try:
-		# execute the brain code
-		brain(imgdata, fnum)
+	def see(self):
+		"""This method captures frames and executes the brain processor"""
 
-		if cv2.waitKey(1) & 0xFF == ord('q'):
-			break
+		while(True):
+			(grabbed, imgdata) = self.capture.read()
 
-	except Exception as e:
-		print "Frame display error: ", e
-		#time.sleep(0.5)
-		continue
+			if not grabbed:
+				# no frame data captured
+				continue
 
-	fnum += 1
-	#time.sleep(0.5)
+			try:
+				# execute the brain code
+				self.brain(imgdata)
 
-capture.release()
-cv2.destroyAllWindows()
+				if cv2.waitKey(1) & 0xFF == ord('q'):
+					break
+
+			except Exception as e:
+				print "Frame processing error: ", e
+				continue
+
+		self.capture.release()
+		cv2.destroyAllWindows()
