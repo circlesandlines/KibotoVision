@@ -5,7 +5,8 @@ def brain(imgdata, fnum):
 	# do image stuff here
 	cv2.imshow('BotStream', imgdata)
 
-capture = cv2.VideoCapture('stream/out.h264')
+#capture = cv2.VideoCapture('stream/out.h264')
+capture = cv2.VideoCapture('stream.sdp')
 cv2.namedWindow('BotStream', cv2.WINDOW_OPENGL)
 
 fnum = 0
@@ -15,7 +16,7 @@ while(True):
 
 	if not grabbed:
 		print "no image"
-		time.sleep(0.2)
+		#time.sleep(0.5)
 		continue
 
 	try:
@@ -27,11 +28,11 @@ while(True):
 
 	except Exception as e:
 		print "Frame display error: ", e
-		time.sleep(0.2)
+		#time.sleep(0.5)
 		continue
 
 	fnum += 1
-	time.sleep(0.2)
+	#time.sleep(0.5)
 
 capture.release()
 cv2.destroyAllWindows()
