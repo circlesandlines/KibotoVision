@@ -1,7 +1,7 @@
 # KibotoVision
 
 A version that allows bots to analyze a live stream of the game for decision making.
-Built with of OpenCV and ffmpeg.
+Built with OpenCV and ffmpeg.
 
 ## Requirements
 - Python 3.x
