@@ -18,3 +18,4 @@ Check the **sample_bot.py** file for an example.
 ## Notes:
 - Check out the `capture_rtp.sh` file for adjusting framerate and stream quality
 - for pyautogui usage, check the sample bot, as well as the [documentation](https://pyautogui.readthedocs.org/en/latest/introduction.html)
+- for lots of modern OpenCV tutorials, check out this [blog](http://www.pyimagesearch.com/)
