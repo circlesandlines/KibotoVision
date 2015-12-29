@@ -1,5 +1,6 @@
 import cv2, platform
 import time
+import pyautogui
 
 """
 	Extend Brain class so you can implement your own brain logic
@@ -14,6 +15,8 @@ class Brain:
 	def __init__(self):
 		self.capture = cv2.VideoCapture('stream.sdp')
 		cv2.namedWindow('DebugVision', cv2.WINDOW_OPENGL)
+		self.pag = pyautogui
+		self.pag.FAILSAFE = True
 
 	def _debug(self, img):
 		cv2.imshow('DebugVision', img)
@@ -21,6 +24,10 @@ class Brain:
 	def brain(self, imgdata):
 		"""Override this function for bot logic"""
 		self._debug(imgdata)
+
+	def execute(self, medium, action):
+		"""Fill this with a web based version if the current
+		one hogs the video capture loop. Use UDP and local server"""
 
 	def see(self):
 		"""This method captures frames and executes the brain processor"""
