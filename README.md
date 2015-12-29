@@ -9,6 +9,12 @@ Built with OpenCV and ffmpeg.
 - pyautogui
 - ffmpeg
 
+## Usage
+Simply extent the Brain class in **brain_rtp.py** and override the **brain** function.
+Check the **sample_bot.py** file for an example.
+
+**Note:** pyautogui has a failsafe feature, so that when your keyboard and mouse actions backfire, you can cancel the actions by moving the mouse to the top right. The Brain class enables this by default.
+
 ## Notes:
 - Check out the `capture_rtp.sh` file for adjusting framerate and stream quality
 - for pyautogui usage, check the sample bot, as well as the [documentation](https://pyautogui.readthedocs.org/en/latest/introduction.html)
