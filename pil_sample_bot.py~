@@ -7,7 +7,7 @@ class MyBrain9000(brain.Brain):
 
 		# make the image smaller so that processing is faster
 		# change to quarter screen size
-		derezzed = cv2.resize(imgdata, None, fx=0.25, fy = 0.25)
+		derezzed = cv2.resize(imgdata, None, fx=1/4.0, fy = 1/4.0)
 
                 # analyze the image to gain some knowledge about the
                 # player's situation
