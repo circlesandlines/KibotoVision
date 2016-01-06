@@ -1,6 +1,9 @@
 # swap files
 *.swp
 
+# windows diff files?
+*~
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
