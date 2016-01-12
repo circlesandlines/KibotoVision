@@ -14,6 +14,10 @@ import pyautogui
 """
 
 class Brain:
+	def initialize(self, kv_dict={}):
+		"""Override this method to initialize your bot in whatever
+		way you'd like"""
+
 	def __init__(self, fps=15):
 		self.fps = fps
 		cv2.namedWindow('DebugVision', cv2.WINDOW_OPENGL)
