@@ -3,7 +3,7 @@ from setuptools import setup
 reqs = ["pyautogui", "pyscreenshot"]
 
 setup(
-    name="brain",
+    name="KibotoVision",
     version="0.0.0",
     install_requires=reqs,
     author="Radu Nicolae",
@@ -12,5 +12,5 @@ setup(
     licence="AGPL",
     keywords="AI brain kiboto vision machine learning",
     url="git@github.com:circlesandlines/KibotoVision.git",
-    packages=["brain"]
+    packages=["KibotoVision"]
 )

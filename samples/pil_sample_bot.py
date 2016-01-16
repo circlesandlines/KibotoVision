@@ -1,5 +1,5 @@
 import cv2
-from brain import brain
+from KibotoVision import brain
 
 class MyBrain9000(brain.Brain):
 	def think(self, imgdata):

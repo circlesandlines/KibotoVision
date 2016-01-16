@@ -1,5 +1,5 @@
 import cv2
-from brain import brain_rtp
+from KibotoVision import brain_rtp
 
 class Mybot9000(brain_rtp.Brain):
 	def brain(self, imgdata):
