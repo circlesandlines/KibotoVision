@@ -10,6 +10,11 @@ Built with OpenCV and ffmpeg.
 - pyautogui
 - ffmpeg
 
+## Installation
+```bash
+python setup.py install
+```
+
 ## Usage
 There are two versions. The pyscreenshot version which simply takes a screengrab at the desired fps using PIL; and the rtmp streaming version that basically creates a live video stream. The rtmp version is **slower** than the pyscreenshot version, it isn't recommended.
 
