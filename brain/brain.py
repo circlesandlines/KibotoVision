@@ -13,6 +13,7 @@ import pyautogui
 
 """
 
+
 class Brain:
 	def initialize(self, kv_dict={}):
 		"""Override this method to initialize your bot in whatever
