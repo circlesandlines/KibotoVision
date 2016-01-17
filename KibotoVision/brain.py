@@ -4,6 +4,8 @@ import cv2
 import time
 import pyautogui
 
+import traceback
+
 """
 	Extend Brain class so you can implement your own brain logic
 	Just override the brain method
@@ -54,7 +56,6 @@ class Brain:
 					break
 
 			except Exception as e:
-				print "Frame processing error: ", e
-				continue
+				traceback.print_exc()
 
 		cv2.destroyAllWindows()

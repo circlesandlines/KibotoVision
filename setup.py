@@ -9,7 +9,7 @@ setup(
     author="Radu Nicolae",
     author_email="ranicolae@gmail.com",
     description="KibotoVision grabs screenshots periodically for you to analyze",
-    licence="AGPL",
+    license="AGPL",
     keywords="AI brain kiboto vision machine learning",
     url="git@github.com:circlesandlines/KibotoVision.git",
     packages=["KibotoVision"]
