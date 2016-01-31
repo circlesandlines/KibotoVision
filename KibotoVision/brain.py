@@ -1,6 +1,16 @@
 import pyscreenshot as ImageGrab
 import numpy
-import cv2
+IMLIB = 'cv2'
+try:
+	raise
+	import imlib as imlib
+except:
+	import skimage as imlib
+	import matplotlib
+	import matplotlib.pyplot as plt
+
+	IMLIB = 'skimage'
+
 import time
 import pyautogui
 
@@ -23,12 +33,16 @@ class Brain:
 
 	def __init__(self, fps=15):
 		self.fps = fps
-		cv2.namedWindow('DebugVision', cv2.WINDOW_OPENGL)
+		if IMLIB == 'cv2':
+			imlib.namedWindow('DebugVision', imlib.WINDOW_OPENGL)
 		self.pag = pyautogui
 		self.pag.FAILSAFE = True
 
 	def _debug(self, img):
-		cv2.imshow('DebugVision', img)
+		if IMLIB == 'cv2':
+			imlib.imshow('DebugVision', img)
+		elif IMLIB == 'skimage':
+			imlib.io.imshow(img, cmap=plt.cm.gray)
 
 	def think(self, imgdata):
 		"""Override this function for bot logic"""
@@ -44,18 +58,19 @@ class Brain:
 
 			# grab a screenshot
 			im = ImageGrab.grab().convert('RGB')
-			open_cv_image = numpy.array(im) 
+			numpy_image = numpy.array(im) 
 			# Convert RGB to BGR 
-			open_cv_image = open_cv_image[:, :, ::-1].copy() 
+			numpy_image = numpy_image[:, :, ::-1].copy() 
 
 			try:
 				# execute the brain code
-				self.think(open_cv_image)
+				self.think(numpy_image)
 
-				if cv2.waitKey(1) & 0xFF == ord('q'):
-					break
+				if IMLIB == 'cv2':
+					if imlib.waitKey(1) & 0xFF == ord('q'):
+						break
 
 			except Exception as e:
 				traceback.print_exc()
 
-		cv2.destroyAllWindows()
+		imlib.destroyAllWindows()
