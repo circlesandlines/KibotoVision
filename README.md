@@ -16,10 +16,10 @@ python setup.py install
 ```
 
 ## Usage
-There are two versions. The pyscreenshot version which simply takes a screengrab at the desired fps using PIL; and the rtmp streaming version that basically creates a live video stream. The rtmp version is **slower** than the pyscreenshot version, it isn't recommended.
+There are two versions. The pyscreenshot version takes a screengrab at the desired fps using PIL; and the rtmp streaming version that creates a live video stream. The rtmp version is **slower** than the pyscreenshot version, it isn't recommended.
 
 ### pyscreenshot Version
-simply follow the example in the **pil_sample_bot.py file**. Specify the fps and brain logic, then simply run with `python pil_sample_bot.py`.
+simply follow the example in the **pil_sample_bot.py file**. Specify the fps and brain logic, then run with `python pil_sample_bot.py`.
 
 ### RTP stream
 There is a bit of lag with this technique depending on your hardware. Simply extent the Brain class in **brain_rtp.py** and override the **brain** function.
