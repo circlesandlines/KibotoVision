@@ -34,7 +34,7 @@ class Brain:
 		"""Override this function for bot logic"""
 		self._debug(imgdata)
 
-	def see(self):
+	def start_bot(self):
 		"""This method captures frames and executes the brain processor"""
 
 		while(True):

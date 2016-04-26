@@ -36,4 +36,4 @@ class MyBrain9000(brain.Brain):
 
 if __name__=="__main__":
 	b = MyBrain9000(fps=30)
-	b.see()
+	b.start_bot()

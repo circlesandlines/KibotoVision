@@ -57,7 +57,7 @@ class MyBrain9000(brain.Brain):
 
 if __name__=="__main__":
 	b = MyBrain9000(fps=30)
-	b.see()
+	b.start_bot()
 ```
 
 **Note:** pyautogui has a failsafe feature, so that when your keyboard and mouse actions backfire, you can cancel the actions by moving the mouse to the top right. The Brain class enables this by default.
