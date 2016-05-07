@@ -66,8 +66,8 @@ if __name__=="__main__":
 ## Notes:
 - for pyautogui usage, check the sample bot, as well as the [documentation](https://pyautogui.readthedocs.org/en/latest/introduction.html)
 - for lots of modern OpenCV tutorials and great install instructions, check out this [blog](http://www.pyimagesearch.com/)
-- if matplot lib generates (this error)[https://github.com/matplotlib/matplotlib/issues/5836], just run the following command:
+- if matplot lib generates [this error](https://github.com/matplotlib/matplotlib/issues/5836), just run the following command:
 ```bash
 rm -rf ~/.matplotlib/fontList.cache
 ```
-- parts of the matplotlib animation implementation can be (found here)[https://github.com/aizvorski/scikit-video/blob/master/skvideo/examples/player.py]
+- parts of the matplotlib animation implementation can be [found here](https://github.com/aizvorski/scikit-video/blob/master/skvideo/examples/player.py
