@@ -5,7 +5,8 @@ Built with OpenCV. For an alternative that doesn't work by analyzing a video str
 
 ## Requirements
 - Python 2.x or 3.x
-- Python OpenCV 3
+- matplotlib
+- scikit-image
 - pyscreenshot
 - pyautogui
 
@@ -65,3 +66,7 @@ if __name__=="__main__":
 ## Notes:
 - for pyautogui usage, check the sample bot, as well as the [documentation](https://pyautogui.readthedocs.org/en/latest/introduction.html)
 - for lots of modern OpenCV tutorials and great install instructions, check out this [blog](http://www.pyimagesearch.com/)
+- if matplot lib generates (this error)[https://github.com/matplotlib/matplotlib/issues/5836], just run the following command:
+```bash
+rm -rf ~/.matplotlib/fontList.cache
+```

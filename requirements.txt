@@ -1,2 +1,3 @@
 pyscreenshot
 pyautogui
+scikit-image
