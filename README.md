@@ -70,3 +70,4 @@ if __name__=="__main__":
 ```bash
 rm -rf ~/.matplotlib/fontList.cache
 ```
+- parts of the matplotlib animation implementation can be (found here)[https://github.com/aizvorski/scikit-video/blob/master/skvideo/examples/player.py]
