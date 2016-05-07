@@ -37,6 +37,10 @@ class Brain:
 		if IMLIB == 'cv2':
 			imlib.namedWindow('DebugVision', imlib.WINDOW_OPENGL)
 		elif IMLIB == 'skimage':
+			# NOTE: need to store some of these object references
+			# so garbage collector doesn't destroy them
+			# prematurely. Stack over flow explanation here:
+			# http://stackoverflow.com/questions/27767773/animation-not-animated-in-matplotlib
 			self.window = plt.figure()
 			self.plt_image = None
 			self.anim = None
