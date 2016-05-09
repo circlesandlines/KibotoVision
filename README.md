@@ -9,6 +9,7 @@ Built with OpenCV. For an alternative that doesn't work by analyzing a video str
 - scikit-image
 - pyscreenshot
 - pyautogui
+- Python VC++ compiler: http://aka.ms/vcpython27
 
 ## Installation
 ```bash

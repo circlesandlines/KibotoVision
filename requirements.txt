@@ -1,3 +1,4 @@
 pyscreenshot
 pyautogui
+matplotlib
 scikit-image
